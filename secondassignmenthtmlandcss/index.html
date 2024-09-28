@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><!--The lang attribute declares the default language-->
+<head>
+   <!-- Required Metadata Section for the assignment -->
+   <meta charset="UTF-8"> <!-- This meta tag defines our character set -->
+   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This meta tag helps the website look good on all devices -->
+   <meta name="description" content="Order delicious pizzas online from our pizza shop. Choose from a variety of sizes, toppings, and more!"> <!-- A short description of the page -->
+   <meta name="robots" content="noindex, nofollow"> <!-- This meta tags tells search engines to index this page -->
+   <title>Pizza Shop Order Form</title> <!-- The title shown in the browser in our page -->
+   <link rel="stylesheet" href="css/styles.css"> <!-- Link to the CSS file for styling -->
+   <link rel="canonical" href="https://www.ourpizzashop.com/order-form"> <!-- A link to avoid duplicate content -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Pizza Shop</h1> <!-- This is our main title of the page -->
+        <nav> <!--  For Navigation links  -->
+            <ul>
+                <li><a href="#order-form">Order Your Pizza</a></li> <!-- Link for the Pizza Order Form-->
+                <li><a href="#order-confirmation">Order Confirmation</a></li> <!-- Link for the confirmation of customer pizza Order -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="order-form"> <!-- Section for the Pizza Order Form-->
+            <h2>Order Your Pizza</h2> <!-- Subheading for the Pizza Order Form-->
+            <form id="pizza-order-form" action="/submit-order" method="POST"> <!-- The order form -->
+                <div> <!-- Div for name input -->
+                    <label for="customer-name">Your Name:</label> <!-- Label for the name input -->
+                    <input type="text" id="customer-name" name="customer-name" placeholder="Shishir Adhikari" required> <!-- Text input for the customer's name -->
+                </div>
+
+                <div> <!-- Div for email input -->
+                    <label for="customer-email">Email:</label> <!-- Label for the email input -->
+                    <input type="email" id="customer-email" name="customer-email" placeholder="info.itachira.shishir@gmail.com" required> <!-- Email input for the user -->
+                </div>
+
+                <div> <!-- Div for pizza size selection -->
+                    <label for="pizza-size">Select Your Pizza Size:</label> <!-- Label tag for pizza size selection -->
+                    <select id="pizza-size" name="pizza-size" required> <!-- Dropdown menu for selecting pizza size -->
+                        <option value="" disabled selected>Select size</option> <!-- Default option that is disabled -->
+                        <option value="small">Small</option> <!-- Option for small pizza -->
+                        <option value="medium">Medium</option> <!-- Option for medium pizza -->
+                        <option value="large">Large</option> <!-- Option for large pizza -->
+                    </select>
+                </div>
+
+                <fieldset> <!-- Grouping for toppings in the Pizza -->
+                    <legend>Select Toppings:</legend> <!-- Legend for the toppings section -->
+                    <div> <!-- Div for individual toppings -->
+                        <label>
+                            <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni <!-- Checkbox for pepperoni -->
+                        </label>
+                    </div>
+                    <div> <!-- Div for individual toppings -->
+                        <label>
+                            <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms <!-- Checkbox for mushrooms -->
+                        </label>
+                    </div>
+                    <div> <!-- Div for individual toppings -->
+                        <label>
+                            <input type="checkbox" name="toppings" value="onions"> Onions <!-- Checkbox for onions -->
+                        </label>
+                    </div>
+                    <div> <!-- Div for individual toppings -->
+                        <label>
+                            <input type="checkbox" name="toppings" value="sausage"> Sausage <!-- Checkbox for sausage -->
+                        </label>
+                    </div>
+                    <div> <!-- Div for individual toppings -->
+                        <label>
+                            <input type="checkbox" name="toppings" value="extra-cheese"> Extra Cheese <!-- Checkbox for extra cheese -->
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div> <!-- Div for number of pizzas input -->
+                    <label for="number-of-pizzas">How many pizzas?</label> <!-- Label for the number of pizzas -->
+                    <input type="number" id="number-of-pizzas" name="number-of-pizzas" min="1" max="20" required placeholder="1"> <!-- Selection of Quantity of Pizza -->
+                </div>
+
+                <div> <!-- Div for special requests input -->
+                    <label for="special-request">Special Requests:</label> <!-- Label for  any special requests of the customer-->
+                    <textarea id="special-request" name="special-request" rows="4" placeholder="Any special requests?"></textarea> <!-- Text area for extra requests from the customers -->
+                </div>
+
+                <button type="submit">Place Order</button> <!-- Button tag to submit the order of the customer -->
+            </form> <!-- This is the end of the order form -->
+        </section>
+
+        <section id="order-confirmation" style="display:none;"> <!-- This is the hidden section for order confirmation -->
+            <h2>Order Confirmation</h2> <!-- Subheading for confirmation of the Order -->
+            <div id="confirmation-details"></div> <!-- Placeholder for confirmation details -->
+        </section>
+
+        <article class="featured-pizza">
+            <h2>Special Pizza: Margherita</h2>
+            <img src="img/xipizza.jpg" alt="Margherita Pizza" class="pizza-image">
+            <p>Try our classic Margherita pizza! Made with fresh mozzarella, ripe tomatoes, and basil, it's a customer favorite.</p>
+            <p>It's available in all sizes with your choice of crust.</p>
+        </article>        
+
+        <aside> <!-- Aside for additional information -->
+            <h3>Pizza Shop Specials</h3> <!-- Title for the specials section -->
+            <p>Don't miss our 2-for-1 Tuesday deal! Order any two pizzas and pay for just one. It's a Deal Breaker</p> <!-- Special promotion -->
+            <p>Sign up for our newsletter and get 30% off your next order!</p> <!-- Newsletter promotion -->
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Shop</p> <!-- Footer with copyright notice -->
+        <p>Follow us on:
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a> <!-- Links to our social media page if any request -->
+        </p>
+    </footer>
+</body>
+</html>
